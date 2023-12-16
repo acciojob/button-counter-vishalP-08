@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
 
-const ClickCounter = () => {
-  const [clickCount, setClickCount] = useState(0);
-
-  const handleClick = () => {
-    setClickCount(clickCount + 1);
-  };
-
+const App = () => {
   return (
     <div>
-      <p>Button clicked {clickCount} times</p>
-      <button onClick={handleClick}>Click me</button>
+      <ClickCounter />
     </div>
   );
 };
 
-export default ClickCounter;
+
+ReactDOM.render(<App />, document.getElementById("root"));
